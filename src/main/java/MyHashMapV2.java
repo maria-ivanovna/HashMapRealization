@@ -33,14 +33,6 @@ public class MyHashMapV2 {
             for (count = index(hash(key)); ; count++) {
                 if(count == setSize) count = 0;
                 if(table[count].isEmpty()) {
-                    /*
-                    Заготовка на DEELETE
-
-                    table[count] = new Pair(key, value);
-                    table[count].becomeFull();
-                    sizeCount++*/
-
-//                    throw new NullPointerException("Colizion");
                     return;
                 }
                 if(table[count].getKey() == key) {
@@ -79,7 +71,6 @@ public class MyHashMapV2 {
     public double get(int key) {
             for (int i = index(hash(key)); ; i++) {
                 if (i == setSize) i = 0;
-                //if (!isContainsKey(key)) throw new RuntimeException("No such key!");
                 if (table[i].getKey() == key) {
                     try {
                         return table[i].getValue();
