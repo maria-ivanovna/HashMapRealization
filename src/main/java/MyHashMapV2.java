@@ -27,27 +27,6 @@ public class MyHashMapV2 {
         return Math.abs(hash) % setSize;
     }
 
-//    public void put(int key, double value){
-//        int i = index(hash(key));
-//        try {
-//            if(table[i].isEmpty()){
-//                table[i] = new Pair(key, value);
-//            }
-//            for (count = index(hash(key)); ; count++){
-//                if(i == setSize)i = 0;
-//                if(table[count].isEmpty()||table[count].getKey()==key){
-//
-//                }
-//            }
-//        }catch (NullPointerException ex){
-//            table[count] = new Pair(key, value);
-//            table[count].becomeFull();
-//        }
-//            if(table[hash].isEmpty()){
-//                table[hash] = new Pair(key, value);
-//                table[hash].becomeFull();
-//            }//for (int i = index(hash(x)); ; i++){}
-
     /* Добавляет пару в множество */
     public void put(int key, double value){
         try{
